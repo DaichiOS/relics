@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "MyApp with Environment Variables",
+        "request": "launch",
+        "mainClass": "org.daichiOS.App",
+        "projectName": "relics",
+        "env": {
+          "DB_URL": "jdbc:h2:mem:testdb",
+          "LOG_LEVEL": "DEBUG"
+        },
+        "args": ["arg1", "arg2"]
+      }
+    ]
+  }

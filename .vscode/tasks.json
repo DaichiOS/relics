@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build Project",
+        "type": "shell",
+        "command": "gradlew build",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Run Application",
+        "type": "shell",
+        "command": "gradlew run",
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Format Java Code",
+        "type": "shell",
+        "command": "gradlew spotlessApply",
+        "group": "none"
+      },
+      {
+        "label": "Clean and Build",
+        "type": "shell",
+        "command": "gradlew clean build",
+        "group": "build"
+      },
+      {
+        "label": "Run Tests",
+        "type": "shell",
+        "command": "gradlew test",
+        "group": "test"
+      },
+      {
+        "label": "Format, Build and Run",
+        "type": "shell",
+        "command": "gradlew spotlessApply && gradlew build && gradlew run",
+        "group": {
+          "kind": "test",
+          "isDefault": false
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
